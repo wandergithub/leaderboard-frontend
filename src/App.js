@@ -5,6 +5,7 @@ import LeaderBoard from './components/LeaderBoard';
 function App() {
   return (
     <>
+      <h1>Leader Board</h1>
       <Routes>
         <Route path="/" element={<LeaderBoard />} />
       </Routes>

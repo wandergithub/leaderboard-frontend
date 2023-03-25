@@ -1,8 +1,8 @@
 const LeaderBoard = () => {
     return (
         <div>
-            <ul>
-                <li>wander</li>
+            <ul className="list-group">
+                <li className="list-group-item">wander</li>
             </ul>
         </div>
     );
