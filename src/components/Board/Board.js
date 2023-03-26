@@ -1,4 +1,4 @@
-const LeaderBoard = () => {
+const Board = () => {
     return (
         <div>
             <ul className="list-group">
@@ -9,4 +9,4 @@ const LeaderBoard = () => {
 };
 
 
-export default LeaderBoard;
+export default Board;
