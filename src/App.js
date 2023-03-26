@@ -5,12 +5,12 @@ import Board from './components/Board/Board';
 function App() {
   return (
     <>
-      <h1 className="m-5">Leader Board</h1>
+      <h1 className="m-5">Leaderboard</h1>
       <Routes>
         <Route path="/" element={<Board />} />
       </Routes>
       <h2 className="m-5" >Add new player</h2>
-      <form className="container d-flex flex-column m-5">
+      <form className="d-flex flex-column m-5">
         <label for="name" className="form-label mt-3">Name:</label>
         <input type={"text"} id="name" />
 
