@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <h1 className="m-5">Leaderboard</h1>
+      <h1 className="m-5">SRL Leaderboard</h1>
       <Routes>
         <Route path="/" element={<Board />} />
       </Routes>
