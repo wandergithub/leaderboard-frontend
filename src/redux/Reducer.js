@@ -5,7 +5,7 @@ import axios from "axios";
 // Reducer
 const Reducer = (state = { players: [], groups: [] }, action = {}) => {
   switch (action.type) {
-    case value:
+    case "":
       break;
 
     default:
