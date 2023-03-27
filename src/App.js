@@ -1,8 +1,14 @@
-import { Routes, Route, Form } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Board from './components/Board/Board';
+import { fetchPlayers } from './redux/Reducer';
 
 function App() {
+  // Initialize players list
+  const dispatch = useDispatch();
+  dispatch(fetchPlayers);
+
   return (
     <>
       <h1 className="m-5">Leaderboard</h1>
