@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -7,7 +8,10 @@ import { fetchPlayers } from './redux/Reducer';
 function App() {
   // Initialize players list
   const dispatch = useDispatch();
-  dispatch(fetchPlayers);
+  
+  useEffect(() => {
+    dispatch(fetchPlayers());
+  },[]);
 
   return (
     <>
