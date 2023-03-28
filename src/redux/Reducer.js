@@ -20,7 +20,7 @@ export const playersFetched = (players) => ({
 });
 
 // Thunks
-export const fetchPlayers = (dispatch) => async () => {
+export const fetchPlayers = () => async (dispatch) => {
   const response = await axios.get("http://127.0.0.1:3000/users");
   if (response) {
     dispatch(playersFetched(response.data));
