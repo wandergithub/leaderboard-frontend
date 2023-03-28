@@ -29,7 +29,7 @@ export function PlayerCreateForm() {
         <label for="name" className="form-label mt-3">
           Name:
         </label>
-        <input type={"text"} id="name" name="name" value={name} />
+        <input type={"text"} id="name" name="name" />
 
         <button type="button" className="btn btn-success mt-3" onClick={handleSubmit}>
           Create

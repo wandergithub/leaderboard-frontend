@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Board from "./components/Board/Board";
-import { PlayerCreateForm } from "./components/Form/Form";
+import { PlayerCreateForm } from "./components/PlayerForm/PlayerForm";
 import { fetchPlayers } from "./redux/Reducer";
 
 function App() {
