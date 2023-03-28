@@ -20,8 +20,9 @@ export const playersFetched = (players) => ({
 });
 
 // Thunks
+const BASE_URL = "http://localhost:3000";
 export const fetchPlayers = () => async (dispatch) => {
-  const response = await axios.get("http://127.0.0.1:3000/users");
+  const response = await axios.get(`${BASE_URL}/users`);
   if (response) {
     dispatch(playersFetched(response.data));
   }
