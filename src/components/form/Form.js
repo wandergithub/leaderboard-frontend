@@ -1,7 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { createPlayer } from "../../redux/Reducer";
 
 export function PlayerCreateForm() {
-  const [name, setName] = useSelector("");
+  const [name, setName] = useState("");
   const dispatch = useDispatch();
   //   Form actions
   const handleChange = (e) => {
@@ -17,7 +19,7 @@ export function PlayerCreateForm() {
   };
 
   const handleSubmit = () => {
-    dispatch();
+    dispatch(createPlayer(name));
   };
 
   return (
@@ -29,7 +31,7 @@ export function PlayerCreateForm() {
         </label>
         <input type={"text"} id="name" name="name" value={name} />
 
-        <button type="submit" className="btn btn-success mt-3">
+        <button type="button" className="btn btn-success mt-3" onClick={handleSubmit}>
           Create
         </button>
       </form>

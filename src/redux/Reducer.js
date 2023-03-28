@@ -9,7 +9,7 @@ const Reducer = (state = { players: [], groups: [] }, action = {}) => {
     case PLAYER_INDEX:
       return { ...state, players: action.payload };
     case PLAYER_CREATE:
-      return { ...state, players: [...players, action.payload] };
+      return { ...state, players: [...state.players, action.payload] };
     default:
       return state;
   }
@@ -21,7 +21,7 @@ export const playersFetched = (players) => ({
   payload: players,
 });
 
-export const playerCreate = (player) => ({
+export const playerCreated = (player) => ({
   type: PLAYER_CREATE,
   payload: player,
 });
@@ -39,7 +39,7 @@ export const createPlayer = (name) => async (dispatch) => {
   const data = { name: name };
   const response = await axios.post(`${BASE_URL}/users`, data);
   if (response) {
-    dispatch(playerCreate(response.data));
+    dispatch(playerCreated(response.data));
   }
 };
 
