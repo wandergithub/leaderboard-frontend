@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addRaceStats } from "../../redux/Reducer";
 
 export default function RaceStatsForm(props) {
   const { players } = props;
@@ -9,6 +11,8 @@ export default function RaceStatsForm(props) {
     setPull(players);
   }, [players]);
 
+
+  const dispatch = useDispatch();
   return (
     <>
       <h5>Available players: {playersPull.length}</h5>
@@ -49,7 +53,7 @@ export default function RaceStatsForm(props) {
         ))}
       </ul>
       <form>
-        <button type="button" className="btn btn-success mt-3">
+        <button type="button" className="btn btn-success mt-3" onClick={() => dispatch(addRaceStats(racers))}>
           Add race stats
         </button>
       </form>
