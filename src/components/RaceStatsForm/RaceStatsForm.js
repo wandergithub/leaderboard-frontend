@@ -56,13 +56,23 @@ export default function RaceStatsForm(props) {
       <form>
         <button
           type="button"
-          className="btn btn-success mt-3"
+          className="btn btn-success mt-3 mx-2"
           onClick={() => {
             dispatch(addRaceStats(racers));
             setRacers([]);
           }}
         >
           Add race stats
+        </button>
+        <button
+          type="button"
+          className="btn btn-warning mt-3"
+          onClick={() => {
+            setRacers([]);
+            setPull(players);
+          }}
+        >
+          Reset
         </button>
       </form>
     </>
