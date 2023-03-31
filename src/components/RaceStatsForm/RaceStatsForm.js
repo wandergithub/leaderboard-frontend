@@ -11,7 +11,6 @@ export default function RaceStatsForm(props) {
     setPull(players);
   }, [players]);
 
-
   const dispatch = useDispatch();
   return (
     <>
@@ -30,7 +29,9 @@ export default function RaceStatsForm(props) {
               onClick={() => {
                 if (!racers.includes(player)) {
                   setRacers([...racers, player]);
-                  setPull([...playersPull.filter((element) => player !== element)]);
+                  setPull([
+                    ...playersPull.filter((element) => player !== element),
+                  ]);
                 }
               }}
             >
@@ -39,7 +40,7 @@ export default function RaceStatsForm(props) {
           </li>
         ))}
       </ul>
-      <h5>Race results:  {racers.length}</h5>
+      <h5>Race results: {racers.length}</h5>
       <ul className="list-group bg-info">
         {racers.map((player, index) => (
           <li
@@ -53,7 +54,14 @@ export default function RaceStatsForm(props) {
         ))}
       </ul>
       <form>
-        <button type="button" className="btn btn-success mt-3" onClick={() => dispatch(addRaceStats(racers))}>
+        <button
+          type="button"
+          className="btn btn-success mt-3"
+          onClick={() => {
+            dispatch(addRaceStats(racers));
+            setRacers([]);
+          }}
+        >
           Add race stats
         </button>
       </form>
