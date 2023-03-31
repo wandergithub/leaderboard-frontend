@@ -49,7 +49,18 @@ export default function RaceStatsForm(props) {
           >
             <span>{index}</span>
             <span>{player.name}</span>
-            <span>ELO: {player.points}</span>{" "}
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={() => {
+                setRacers([
+                  ...racers.filter((element) => player.id !== element.id),
+                ]);
+                setPull([...playersPull, player]);
+              }}
+            >
+              delete
+            </button>
           </li>
         ))}
       </ul>
