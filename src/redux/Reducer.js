@@ -54,7 +54,7 @@ export const createPlayer = (name) => async (dispatch) => {
 export const addRaceStats = (list) => async (dispatch) => {
   // Takes a list of race results send to db to be updated and retrieve updated elo list
   const data = { list };
-  const response = await axios.post(`${BASE_URL}`, data);
+  const response = await axios.post(`${BASE_URL}/race`, data);
   if (response) {
     // Response should be a new list of players with new calculated elo
     dispatch(raceStatsAdded(response.data));
