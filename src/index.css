@@ -4,4 +4,36 @@ body {
 }
 #root {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-style: none !important;
+  text-align-last: center;
+  font-weight: 500;
+}
+
+.r-1 {
+  background-color: #2a2e33;
+}
+
+.r-2 {
+  background-color: #1a1a1a00;
+}
+
+.gold {
+  padding-left: 0px !important;
+  border-left: 10px solid #ffc700 !important;
+}
+
+.silver {
+  padding-left: 0px !important;
+  border-left: 10px solid #dadbdb !important;
+}
+
+.bronce {
+  padding-left: 0px !important;
+  border-left: 10px solid #a88956 !important;
 }
