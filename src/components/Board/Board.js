@@ -1,9 +1,6 @@
 import { useSelector } from "react-redux";
-import place_1 from "./Assets/1st-place-medal-svgrepo-com.svg";
-import place_2 from "./Assets/2nd-place-medal-svgrepo-com.svg";
-import place_3 from "./Assets/3rd-place-medal-svgrepo-com.svg";
 import RaceStatsForm from "../RaceStatsForm/RaceStatsForm";
-
+import { PlayerCreateForm } from "../PlayerForm/PlayerForm";
 const Board = () => {
   const players = useSelector((state) => state.players);
 
@@ -19,6 +16,7 @@ const Board = () => {
       </ul>
       <h2 className="mt-5">Add new Race stats:</h2>
       <RaceStatsForm  players={players} />
+      <PlayerCreateForm />
     </div>
   );
 };

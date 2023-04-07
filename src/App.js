@@ -16,12 +16,10 @@ function App() {
 
   return (
     <>
-      <h1 className="m-5">SRL Leaderboard</h1>
       <Routes>
         <Route path="/" element={<Board />} />
         <Route path="/public" element={<PublicBoard />} />
       </Routes>
-      <PlayerCreateForm />
     </>
   );
 }
