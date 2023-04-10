@@ -4,7 +4,7 @@ export default function PublicBoard() {
   const players = useSelector((state) => state.players);
 
   return (
-    <>
+    <div className="publicBoard">
       <h1>SRL Leader Board</h1>
       <table
         className="table m-5"
@@ -52,6 +52,6 @@ export default function PublicBoard() {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }

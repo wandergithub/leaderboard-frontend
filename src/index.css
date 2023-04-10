@@ -2,12 +2,6 @@ body {
   margin: 0;
   background-color: #1a1a1a !important;
 }
-#root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10%;
-}
 
 tbody, td, tfoot, th, thead, tr {
   border-style: none !important;
