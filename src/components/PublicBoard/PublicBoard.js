@@ -47,7 +47,8 @@ export default function PublicBoard() {
                 {index + 1}
               </td>
               <td>{player.name}</td>
-              <td>{player.points}</td> <td>999</td>{" "}
+              <td>{player.points}</td>{" "}
+              <td>{player.races ? player.races : "0"}</td>{" "}
             </tr>
           ))}
         </tbody>
