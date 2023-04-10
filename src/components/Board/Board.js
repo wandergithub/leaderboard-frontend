@@ -8,7 +8,7 @@ const Board = () => {
     <div className="m-5">
       <ul className="list-group">
         {players.map((player) => (
-          <li key={player.id} className="list-group-item d-flex justify-content-between">
+          <li key={Math.random()} className="list-group-item d-flex justify-content-between">
             <span>{player.name}</span>
             <span>ELO: {player.points}</span>{" "}
           </li>

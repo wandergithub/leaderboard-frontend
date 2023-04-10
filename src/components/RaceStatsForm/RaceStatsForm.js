@@ -18,7 +18,7 @@ export default function RaceStatsForm(props) {
       <ul className="list-group">
         {playersPull.map((player) => (
           <li
-            key={player.id}
+            key={Math.random()}
             className="list-group-item d-flex justify-content-between"
           >
             <span>{player.name}</span>
@@ -44,7 +44,7 @@ export default function RaceStatsForm(props) {
       <ul className="list-group bg-info">
         {racers.map((player, index) => (
           <li
-            key={player.id}
+            key={Math.random()}
             className="list-group-item d-flex justify-content-between"
           >
             <span>{index}</span>
