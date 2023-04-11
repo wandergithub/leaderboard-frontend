@@ -17,8 +17,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Board />} />
-        <Route path="/public" element={<PublicBoard />} />
+        <Route path="/oakjdj2k121ac" element={<Board />} />
+        <Route path="/" element={<PublicBoard />} />
       </Routes>
     </>
   );
