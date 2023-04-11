@@ -3,7 +3,12 @@ body {
   background-color: #1a1a1a !important;
 }
 
-tbody, td, tfoot, th, thead, tr {
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
   border-style: none !important;
   text-align-last: center;
   font-weight: 500;
@@ -18,16 +23,16 @@ tbody, td, tfoot, th, thead, tr {
 }
 
 .gold {
-  padding-left: 0px !important;
+  padding-left: 0 !important;
   border-left: 10px solid #ffc700 !important;
 }
 
 .silver {
-  padding-left: 0px !important;
+  padding-left: 0 !important;
   border-left: 10px solid #dadbdb !important;
 }
 
 .bronce {
-  padding-left: 0px !important;
+  padding-left: 0 !important;
   border-left: 10px solid #a88956 !important;
 }
