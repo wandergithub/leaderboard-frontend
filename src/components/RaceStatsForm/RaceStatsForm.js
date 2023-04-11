@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { addRaceStats } from '../../redux/Reducer';
 
 export default function RaceStatsForm(props) {
@@ -99,3 +100,7 @@ export default function RaceStatsForm(props) {
     </>
   );
 }
+
+RaceStatsForm.propTypes = {
+  players: PropTypes.arrayOf(PropTypes.shape([])).isRequired,
+};
