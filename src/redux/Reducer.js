@@ -1,9 +1,9 @@
-import axios from "axios";
+import axios from 'axios';
 
 // Actions
-const PLAYER_INDEX = "player/index";
-const PLAYER_CREATE = "player/create";
-const RACE_STATS_ADD = "race_stats/add";
+const PLAYER_INDEX = 'player/index';
+const PLAYER_CREATE = 'player/create';
+const RACE_STATS_ADD = 'race_stats/add';
 // Reducer
 const Reducer = (state = { players: [], groups: [] }, action = {}) => {
   switch (action.type) {
@@ -35,7 +35,7 @@ export const raceStatsAdded = (players) => ({
 });
 
 // Thunks
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = 'http://localhost:3000';
 export const fetchPlayers = () => async (dispatch) => {
   const response = await axios.get(`${BASE_URL}/users`);
   if (response) {
@@ -44,7 +44,7 @@ export const fetchPlayers = () => async (dispatch) => {
 };
 
 export const createPlayer = (name) => async (dispatch) => {
-  const data = { name: name };
+  const data = { name };
   const response = await axios.post(`${BASE_URL}/users`, data);
   if (response) {
     dispatch(playerCreated(response.data));

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { addRaceStats } from "../../redux/Reducer";
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addRaceStats } from '../../redux/Reducer';
 
 export default function RaceStatsForm(props) {
   const { players } = props;
@@ -14,7 +14,10 @@ export default function RaceStatsForm(props) {
   const dispatch = useDispatch();
   return (
     <>
-      <h5>Available players: {playersPull.length}</h5>
+      <h5>
+        Available players:
+        {playersPull.length}
+      </h5>
       <ul className="list-group">
         {playersPull.map((player) => (
           <li
@@ -22,7 +25,11 @@ export default function RaceStatsForm(props) {
             className="list-group-item d-flex justify-content-between"
           >
             <span>{player.name}</span>
-            <span>ELO: {player.points}</span>{" "}
+            <span>
+              ELO:
+              {player.points}
+            </span>
+            {' '}
             <button
               type="button"
               className="btn btn-success"
@@ -40,7 +47,10 @@ export default function RaceStatsForm(props) {
           </li>
         ))}
       </ul>
-      <h5>Race results: {racers.length}</h5>
+      <h5>
+        Race results:
+        {racers.length}
+      </h5>
       <ul className="list-group bg-info">
         {racers.map((player, index) => (
           <li

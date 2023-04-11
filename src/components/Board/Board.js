@@ -1,6 +1,7 @@
-import { useSelector } from "react-redux";
-import RaceStatsForm from "../RaceStatsForm/RaceStatsForm";
-import { PlayerCreateForm } from "../PlayerForm/PlayerForm";
+import { useSelector } from 'react-redux';
+import RaceStatsForm from '../RaceStatsForm/RaceStatsForm';
+import PlayerCreateForm from '../PlayerForm/PlayerForm';
+
 const Board = () => {
   const players = useSelector((state) => state.players);
 
@@ -10,12 +11,16 @@ const Board = () => {
         {players.map((player) => (
           <li key={Math.random()} className="list-group-item d-flex justify-content-between">
             <span>{player.name}</span>
-            <span>ELO: {player.points}</span>{" "}
+            <span>
+              ELO:
+              {player.points}
+            </span>
+            {' '}
           </li>
         ))}
       </ul>
       <h2 className="mt-5">Add new Race stats:</h2>
-      <RaceStatsForm  players={players} />
+      <RaceStatsForm players={players} />
       <PlayerCreateForm />
     </div>
   );

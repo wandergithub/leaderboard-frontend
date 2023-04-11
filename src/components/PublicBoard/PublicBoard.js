@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
 export default function PublicBoard() {
   const players = useSelector((state) => state.players);
@@ -8,7 +8,7 @@ export default function PublicBoard() {
       <h1>SRL Leader Board</h1>
       <table
         className="table m-5"
-        style={{ color: "#979899", fontFamily: "system-ui" }}
+        style={{ color: '#979899', fontFamily: 'system-ui' }}
       >
         <thead>
           <tr>
@@ -29,11 +29,12 @@ export default function PublicBoard() {
         <tbody>
           {players.map((player, index) => (
             <tr
-              className={(index % 2 === 0 ? "r-1" : "r-2") + ""}
+              className={`${index % 2 === 0 ? 'r-1' : 'r-2'}`}
               key={player.id}
-              style={{ color: "white" }}
+              style={{ color: 'white' }}
             >
               <td
+                /* eslint-disable */
                 className={
                   index === 0
                     ? "gold"
@@ -43,12 +44,15 @@ export default function PublicBoard() {
                     ? "bronce"
                     : ""
                 }
+                /* eslint-enable */
               >
                 {index + 1}
               </td>
               <td>{player.name}</td>
-              <td>{player.points}</td>{" "}
-              <td>{player.races ? player.races : "0"}</td>{" "}
+              <td>{player.points}</td>
+              {' '}
+              <td>{player.races ? player.races : '0'}</td>
+              {' '}
             </tr>
           ))}
         </tbody>

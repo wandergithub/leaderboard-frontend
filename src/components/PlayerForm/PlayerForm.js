@@ -1,15 +1,15 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { createPlayer } from "../../redux/Reducer";
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { createPlayer } from '../../redux/Reducer';
 
-export function PlayerCreateForm() {
-  const [name, setName] = useState("");
+export default function PlayerCreateForm() {
+  const [name, setName] = useState('');
   const dispatch = useDispatch();
   //   Form actions
   const handleChange = (e) => {
     const input = e.target;
     switch (input.name) {
-      case "name":
+      case 'name':
         setName(input.value);
         break;
 
@@ -26,11 +26,7 @@ export function PlayerCreateForm() {
     <>
       <h2 className="m-5">Add new player</h2>
       <form className="d-flex flex-column m-5" onChange={handleChange}>
-        <label for="name" className="form-label mt-3">
-          Name:
-        </label>
-        <input type={"text"} id="name" name="name" />
-
+        <input type="text" id="name" name="name" placeholder="Name" />
         <button type="button" className="btn btn-success mt-3" onClick={handleSubmit}>
           Create
         </button>
