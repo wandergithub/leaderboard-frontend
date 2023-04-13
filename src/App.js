@@ -11,7 +11,7 @@ function App() {
   // Initialize players list
   useEffect(() => {
     dispatch(fetchPlayers());
-  }, []);
+  }, []);// eslint-disable-line
 
   return (
     <>
