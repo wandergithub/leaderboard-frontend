@@ -35,7 +35,7 @@ export const raceStatsAdded = (players) => ({
 });
 
 // Thunks
-const BASE_URL = 'https://racingboard.netlify.app/';
+const BASE_URL = 'https://leaderboard-dn9d.onrender.com';
 export const fetchPlayers = () => async (dispatch) => {
   const response = await axios.get(`${BASE_URL}/users`);
   if (response) {
