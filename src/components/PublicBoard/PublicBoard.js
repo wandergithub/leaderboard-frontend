@@ -27,7 +27,7 @@ export default function PublicBoard() {
           </tr>
         </thead>
         <tbody>
-          {players.map((player, index) => (
+          {players && players.map((player, index) => (
             <tr
               className={`${index % 2 === 0 ? 'r-1' : 'r-2'}`}
               key={player.id}

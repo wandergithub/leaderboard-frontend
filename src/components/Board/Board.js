@@ -8,7 +8,7 @@ const Board = () => {
   return (
     <div className="m-5">
       <ul className="list-group">
-        {players.map((player) => (
+        {players && players.map((player) => (
           <li key={Math.random()} className="list-group-item d-flex justify-content-between">
             <span>{player.name}</span>
             <span>
