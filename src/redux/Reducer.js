@@ -34,6 +34,12 @@ export const raceStatsAdded = (players) => ({
   payload: players,
 });
 
+// Added deleted
+export const playerDeleted = (player) => ({
+  type: RACE_STATS_ADD,
+  payload: player,
+});
+
 // Thunks
 const BASE_URL = 'https://leaderboard-dn9d.onrender.com';
 export const fetchPlayers = () => async (dispatch) => {
@@ -58,6 +64,13 @@ export const addRaceStats = (list) => async (dispatch) => {
   if (response) {
     // Response should be a new list of players with new calculated elo
     dispatch(raceStatsAdded(response.data));
+  }
+};
+
+export const deletePlayer = (id) => async (dispatch) => {
+  const response = await axios.delete(`${BASE_URL}/users/${id}`);
+  if (response) {
+    dispatch(playerDeleted(response.data));
   }
 };
 
