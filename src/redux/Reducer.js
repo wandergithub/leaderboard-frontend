@@ -35,7 +35,7 @@ export const raceStatsAdded = (players) => ({
 });
 
 // Thunks
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://racingboard.netlify.app/';
 export const fetchPlayers = () => async (dispatch) => {
   const response = await axios.get(`${BASE_URL}/users`);
   if (response) {
