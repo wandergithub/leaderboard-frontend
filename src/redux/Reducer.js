@@ -3,6 +3,7 @@ import axios from 'axios';
 // Actions
 const PLAYER_INDEX = 'player/index';
 const PLAYER_CREATE = 'player/create';
+const PLAYER_DELETED = 'player/delete';
 const RACE_STATS_ADD = 'race_stats/add';
 // Reducer
 const Reducer = (state = { players: [], groups: [] }, action = {}) => {
@@ -11,6 +12,13 @@ const Reducer = (state = { players: [], groups: [] }, action = {}) => {
       return { ...state, players: action.payload };
     case PLAYER_CREATE:
       return { ...state, players: [...state.players, action.payload] };
+    case PLAYER_DELETED:
+      return {
+        ...state,
+        players: [
+          ...state.players.filter((player) => player.id !== action.payload.id),
+        ],
+      };
     case RACE_STATS_ADD:
       return { ...state, players: action.payload };
     default:
@@ -28,15 +36,14 @@ export const playerCreated = (player) => ({
   type: PLAYER_CREATE,
   payload: player,
 });
-// Added new race stats update players
+
 export const raceStatsAdded = (players) => ({
   type: RACE_STATS_ADD,
   payload: players,
 });
 
-// Added deleted
 export const playerDeleted = (player) => ({
-  type: RACE_STATS_ADD,
+  type: PLAYER_DELETED,
   payload: player,
 });
 
